@@ -1,4 +1,4 @@
-# Getir Clone Anasayfa
+# Getir Clone Arayüz Alıştırması
 
 Bu GitHub reposu, Android'deki RecyclerView yapısını kullanarak temel bir tasarım alıştırması yapmak amacıyla oluşturulmuştur.
 
