@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.batuhankocagoz.getircloneapp.R
@@ -84,6 +85,14 @@ class HomeFragment : Fragment() {
 
         val categoryAdapter = CategoryAdapter(requireContext(),categoryList)
         binding.recyclerViewCategory.adapter = categoryAdapter
+
+        val address = ArrayList<String>()
+        address.add("Ev, İnönü, 4138 Sk., 24A, Menemen")
+        address.add("Ev, Değirmenönü, 1 Sk., Pamukkale")
+        address.add("Ev, Kuşpınar, 2 Sk., Merkezefendi")
+
+        val arrayAdapter = ArrayAdapter(requireContext(),android.R.layout.simple_list_item_1,address)
+        binding.autoCompleteTextView.setAdapter(arrayAdapter)
 
 
 

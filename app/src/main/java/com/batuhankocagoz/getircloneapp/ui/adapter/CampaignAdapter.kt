@@ -17,14 +17,12 @@ class CampaignAdapter (var mContext: Context, var campaignList: List<Campaign>) 
         return CardCampaignHolder(binding)
     }
 
-
     override fun onBindViewHolder(holder: CardCampaignHolder, position: Int) {
         val campaign = campaignList.get(position)
         val itemBinding = holder.design
 
         itemBinding.imageViewCampaign.setImageResource(mContext.resources.getIdentifier(campaign.campaign_image,"drawable",mContext.packageName))
     }
-
 
     override fun getItemCount(): Int {
         return campaignList.size
